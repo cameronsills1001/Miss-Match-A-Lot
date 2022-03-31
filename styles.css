@@ -1,0 +1,18 @@
+body {
+  background-color: black;
+}
+.game-board {
+  margin-top: 20%;
+}
+
+.row {
+  margin: 5% 0;
+}
+
+.match {
+  box-shadow: 0 0 5px 10px #84FB0D;
+}
+
+.no-match {
+  box-shadow: 0 0 5px 10px red;
+}

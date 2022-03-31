@@ -1,0 +1,9 @@
+Things to do next:
+Make card image
+change spongebob to the card image: done
+crop all the pictures square (maybe resize): done
+make global click boolean so new cards can't be clicked while current cards are showing: done
+make box shadow for green and red when a match is made or not
+make a image box at the top that will display all of the matched images
+find monster machine images that are more square
+explore ways for user to add images
