@@ -4,6 +4,7 @@ const masterList = ["ashe", "blaze","bulbasaur","charmander","darrington", "gary
 var doubleList = makeDoubleList();
 var cardList = makeCards();
 var clickedCards = [];
+var statusList = [];
 var clickCount = 0;
 var globalClick = true;
 
@@ -55,6 +56,9 @@ function checkMatch() {
     var index2 = clickedCards[1].slice(3);
     //if there is a match
     if(cardList[index1].cardName === cardList[index2].cardName){
+      var statusIndex = statusList.length;
+      $("#status" + statusIndex + "> img").attr("src", "images/" + cardList[index1].image)
+      statusList.push(cardList[index1].cardName);
       $("#card"+index1).addClass("match");
       $("#card"+index2).addClass("match");
       $("#card"+index1).animate({opacity: 0},2000);
@@ -63,6 +67,12 @@ function checkMatch() {
         $("#card"+index1).removeClass("match");
         $("#card"+index2).removeClass("match");
       }, 2000);
+      if(statusList.length === 12) {
+        setTimeout(function() {
+          $("#end-overlay").css({"display":"inline"});
+        },2200);
+
+      };
       clearMatchParamters();
     } else {
       $("#card"+index1).addClass("no-match");
@@ -75,7 +85,7 @@ function checkMatch() {
 
 $('img').click(function() {
   var pic = event.target.id;
-  console.log(pic);
+  //console.log(pic);
   var index = pic.slice(3);
   if(cardList[index].clickable && globalClick){
     $("#"+pic).attr("src", "images/"+ cardList[index].image);
@@ -87,4 +97,9 @@ $('img').click(function() {
     console.log("This card isn't clickable");
   }
 
+});
+
+$("#restart").click(function(){
+  console.log("Restarting Game");
+  location.reload();
 });

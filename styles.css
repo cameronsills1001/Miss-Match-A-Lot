@@ -2,7 +2,7 @@ body {
   background-color: black;
 }
 .game-board {
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
 .row {
@@ -15,4 +15,68 @@ body {
 
 .no-match {
   box-shadow: 0 0 5px 10px red;
+}
+
+.status-bar {
+  background-color: orange;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.status-img {
+  border-radius: 25px;
+  width: 100%;
+  background-color: white;
+}
+
+.status-row {
+  padding: 5px;
+}
+
+.col-1 {
+  padding: 5px;
+}
+
+.win {
+  font-family: lobster, cursive;
+  font-size: 5rem;
+  color: orange;
+  position: fixed;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, 0);
+
+}
+
+.win-sm {
+  font-family: lobster, cursive;
+  font-size: 2rem;
+  color: orange;
+  position: fixed;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, 0);
+}
+
+#end-overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#restart {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 0);
 }
