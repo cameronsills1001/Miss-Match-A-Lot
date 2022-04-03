@@ -7,6 +7,11 @@ var clickedCards = [];
 var statusList = [];
 var clickCount = 0;
 var globalClick = true;
+var winSound = new Audio("sounds/win.wav");
+var clickSound = new Audio("sounds/click.wav");
+var correctSound = new Audio("sounds/correct.wav");
+
+
 
 //making a list of 2 of each of randomly selected characters
 function makeDoubleList() {
@@ -56,6 +61,7 @@ function checkMatch() {
     var index2 = clickedCards[1].slice(3);
     //if there is a match
     if(cardList[index1].cardName === cardList[index2].cardName){
+      correctSound.play();
       var statusIndex = statusList.length;
       $("#status" + statusIndex + "> img").attr("src", "images/" + cardList[index1].image)
       statusList.push(cardList[index1].cardName);
@@ -68,7 +74,9 @@ function checkMatch() {
         $("#card"+index2).removeClass("match");
       }, 2000);
       if(statusList.length === 12) {
+        //this means the game is 'won' and all available cards are matched
         setTimeout(function() {
+          winSound.play();
           $("#end-overlay").css({"display":"inline"});
         },2200);
 
@@ -86,6 +94,7 @@ function checkMatch() {
 $('img').click(function() {
   var pic = event.target.id;
   //console.log(pic);
+  clickSound.play();
   var index = pic.slice(3);
   if(cardList[index].clickable && globalClick){
     $("#"+pic).attr("src", "images/"+ cardList[index].image);
@@ -100,6 +109,5 @@ $('img').click(function() {
 });
 
 $("#restart").click(function(){
-  console.log("Restarting Game");
   location.reload();
 });
