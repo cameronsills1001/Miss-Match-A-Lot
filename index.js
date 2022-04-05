@@ -13,6 +13,11 @@ var correctSound = new Audio("sounds/correct.wav");
 
 
 
+//disable context menu
+document.addEventListener("contextmenu", function(event){
+event.preventDefault();
+}, false);
+
 //making a list of 2 of each of randomly selected characters
 function makeDoubleList() {
   var selectList = masterList;
