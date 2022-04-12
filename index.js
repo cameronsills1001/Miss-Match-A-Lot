@@ -1,15 +1,15 @@
 
 
 const masterList = ["ashe", "blaze","bulbasaur","charmander","darrington", "gary", "krabs", "patrick", "pikachu", "sandy", "spongebob", "squidward", "squirtle"];
-var doubleList = makeDoubleList();
-var cardList = makeCards();
-var clickedCards = [];
-var statusList = [];
-var clickCount = 0;
-var globalClick = true;
-var winSound = new Audio("sounds/win.wav");
-var clickSound = new Audio("sounds/click.wav");
-var correctSound = new Audio("sounds/correct.wav");
+const doubleList = makeDoubleList();
+const cardList = makeCards();
+let clickedCards = [];
+const statusList = [];
+let clickCount = 0;
+let globalClick = true;
+const winSound = new Audio("sounds/win.wav");
+const clickSound = new Audio("sounds/click.wav");
+const correctSound = new Audio("sounds/correct.wav");
 
 
 
@@ -20,10 +20,10 @@ event.preventDefault();
 
 //making a list of 2 of each of randomly selected characters
 function makeDoubleList() {
-  var selectList = masterList;
-  var retList = [];
-  for(var i = 0; i < 12; i++) {
-    var index = Math.floor(Math.random() * selectList.length);
+  const selectList = masterList;
+  const retList = [];
+  for(let i = 0; i < 12; i++) {
+    const index = Math.floor(Math.random() * selectList.length);
     for(var x = 0; x < 2; x++) {
       retList.push(selectList[index]);
     }
@@ -34,9 +34,9 @@ function makeDoubleList() {
 
 //making the cards from the doubleList
 function makeCards() {
-  var cardList = [];
+  const cardList = [];
   for(var i = 0; i < 24; i++ ) {
-    var index = Math.floor(Math.random() * doubleList.length);
+    const index = Math.floor(Math.random() * doubleList.length);
     cardList.push({cardName: doubleList[index], image: doubleList[index] +".png", clickable: true});
     doubleList.splice(index, 1);
   }
@@ -50,8 +50,8 @@ function clearMatchParamters(){
 }
 
 function flipCards(){
-  for(var i = 0; i < 2; i++) {
-    var index = clickedCards[i].slice(3);
+  for(let i = 0; i < 2; i++) {
+    const index = clickedCards[i].slice(3);
     cardList[index].clickable = true;
     $("#"+clickedCards[i]).attr("src", "images/cardBack.png");
     $("#card"+index).removeClass("no-match");
@@ -62,12 +62,12 @@ function flipCards(){
 function checkMatch() {
   if(clickCount === 2){
     globalClick = false;
-    var index1 = clickedCards[0].slice(3);
-    var index2 = clickedCards[1].slice(3);
+    const index1 = clickedCards[0].slice(3);
+    const index2 = clickedCards[1].slice(3);
     //if there is a match
     if(cardList[index1].cardName === cardList[index2].cardName){
       correctSound.play();
-      var statusIndex = statusList.length;
+      const statusIndex = statusList.length;
       $("#status" + statusIndex + "> img").attr("src", "images/" + cardList[index1].image)
       statusList.push(cardList[index1].cardName);
       $("#card"+index1).addClass("match");
@@ -97,10 +97,10 @@ function checkMatch() {
 }
 
 $('img').click(function() {
-  var pic = event.target.id;
+  let pic = event.target.id;
   //console.log(pic);
   clickSound.play();
-  var index = pic.slice(3);
+  let index = pic.slice(3);
   if(cardList[index].clickable && globalClick){
     $("#"+pic).attr("src", "images/"+ cardList[index].image);
     clickedCards.push(pic);
