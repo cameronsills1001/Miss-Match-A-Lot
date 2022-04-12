@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -22,183 +22,184 @@
     <button id="restart" class="btn btn-warning btn-lg">Play Again</button>
   </div>
   <!--Status Bar -->
-  <div class="container-fliud status-bar">
-    <div class="row status-row">
-      <div id="status0" class="col-1">
-        <img class="status-img" src="images\empty-status.png" />
+  <div id="play-field">
+    <div class="container-fliud status-bar">
+      <div class="row status-row">
+        <div id="status0" class="col-1">
+          <img class="status-img" src="images\empty-status.png" />
+        </div>
+        <div id="status1" class="col-1">
+          <img class="status-img" src="images\empty-status.png" />
+        </div>
+        <div id="status2" class="col-1">
+          <img class="status-img" src="images\empty-status.png" />
+        </div>
+        <div id="status3" class="col-1">
+          <img class="status-img" src="images\empty-status.png" />
+        </div>
+        <div id="status4" class="col-1">
+          <img class="status-img" src="images\empty-status.png" />
+        </div>
+        <div id="status5" class="col-1">
+          <img class="status-img" src="images\empty-status.png" />
+        </div>
+        <div id="status6" class="col-1">
+          <img class="status-img" src="images\empty-status.png" />
+        </div>
+        <div id="status7" class="col-1">
+          <img class="status-img" src="images\empty-status.png" />
+        </div>
+        <div id="status8" class="col-1">
+          <img class="status-img" src="images\empty-status.png" />
+        </div>
+        <div id="status9" class="col-1">
+          <img class="status-img" src="images\empty-status.png" />
+        </div>
+        <div id="status10" class="col-1">
+          <img class="status-img" src="images\empty-status.png" />
+        </div>
+        <div id="status11" class="col-1">
+          <img class="status-img" src="images\empty-status.png" />
+        </div>
       </div>
-      <div id="status1" class="col-1">
-        <img class="status-img" src="images\empty-status.png" />
+    </div>
+
+    <!--Game Board -->
+    <div class="container-fluid game-board">
+      <div class="row card-row">
+        <div class="col-3">
+          <div id="card0" class="card">
+            <img id="pic0" src="images\cardBack.png" />
+          </div>
+        </div>
+        <div class="col-3">
+          <div id="card1" class="card">
+            <img id="pic1" src="images\cardBack.png" />
+          </div>
+        </div>
+        <div class="col-3">
+          <div id="card2" class="card">
+            <img id="pic2" src="images\cardBack.png" />
+          </div>
+        </div>
+        <div class="col-3">
+          <div id="card3" class="card">
+            <img id="pic3" src="images\cardBack.png" />
+          </div>
+        </div>
       </div>
-      <div id="status2" class="col-1">
-        <img class="status-img" src="images\empty-status.png" />
+      <div class="row  card-row">
+        <div id="card4" class="col-3">
+          <div class="card">
+            <img id="pic4" src="images\cardBack.png" />
+          </div>
+        </div>
+        <div class="col-3">
+          <div id="card5" class="card">
+            <img id="pic5" src="images\cardBack.png" />
+          </div>
+        </div>
+        <div class="col-3">
+          <div id="card6" class="card">
+            <img id="pic6" src="images\cardBack.png" />
+          </div>
+        </div>
+        <div class="col-3">
+          <div id="card7" class="card">
+            <img id="pic7" src="images\cardBack.png" />
+          </div>
+        </div>
       </div>
-      <div id="status3" class="col-1">
-        <img class="status-img" src="images\empty-status.png" />
+      <div class="row  card-row">
+        <div class="col-3">
+          <div id="card8" class="card">
+            <img id="pic8" src="images\cardBack.png" />
+          </div>
+        </div>
+        <div class="col-3">
+          <div id="card9" class="card">
+            <img id="pic9" src="images\cardBack.png" />
+          </div>
+        </div>
+        <div class="col-3">
+          <div id="card10" class="card">
+            <img id="pic10" src="images\cardBack.png" />
+          </div>
+        </div>
+        <div class="col-3">
+          <div id="card11" class="card">
+            <img id="pic11" src="images\cardBack.png" />
+          </div>
+        </div>
       </div>
-      <div id="status4" class="col-1">
-        <img class="status-img" src="images\empty-status.png" />
+      <div class="row  card-row">
+        <div class="col-3">
+          <div id="card12" class="card">
+            <img id="pic12" src="images\cardBack.png" />
+          </div>
+        </div>
+        <div class="col-3">
+          <div id="card13" class="card">
+            <img id="pic13" src="images\cardBack.png" />
+          </div>
+        </div>
+        <div class="col-3">
+          <div id="card14" class="card">
+            <img id="pic14" src="images\cardBack.png" />
+          </div>
+        </div>
+        <div class="col-3">
+          <div id="card15" class="card">
+            <img id="pic15" src="images\cardBack.png" />
+          </div>
+        </div>
       </div>
-      <div id="status5" class="col-1">
-        <img class="status-img" src="images\empty-status.png" />
+      <div class="row  card-row">
+        <div class="col-3">
+          <div id="card16" class="card">
+            <img id="pic16" src="images\cardBack.png" />
+          </div>
+        </div>
+        <div class="col-3">
+          <div id="card17" class="card">
+            <img id="pic17" src="images\cardBack.png" />
+          </div>
+        </div>
+        <div class="col-3">
+          <div id="card18" class="card">
+            <img id="pic18" src="images\cardBack.png" />
+          </div>
+        </div>
+        <div class="col-3">
+          <div id="card19" class="card">
+            <img id="pic19" src="images\cardBack.png" />
+          </div>
+        </div>
       </div>
-      <div id="status6" class="col-1">
-        <img class="status-img" src="images\empty-status.png" />
-      </div>
-      <div id="status7" class="col-1">
-        <img class="status-img" src="images\empty-status.png" />
-      </div>
-      <div id="status8" class="col-1">
-        <img class="status-img" src="images\empty-status.png" />
-      </div>
-      <div id="status9" class="col-1">
-        <img class="status-img" src="images\empty-status.png" />
-      </div>
-      <div id="status10" class="col-1">
-        <img class="status-img" src="images\empty-status.png" />
-      </div>
-      <div id="status11" class="col-1">
-        <img class="status-img" src="images\empty-status.png" />
+      <div class="row  card-row">
+        <div class="col-3">
+          <div id="card20" class="card">
+            <img id="pic20" src="images\cardBack.png" />
+          </div>
+        </div>
+        <div class="col-3">
+          <div id="card21" class="card">
+            <img id="pic21" src="images\cardBack.png" />
+          </div>
+        </div>
+        <div class="col-3">
+          <div id="card22" class="card">
+            <img id="pic22" src="images\cardBack.png" />
+          </div>
+        </div>
+        <div class="col-3">
+          <div id="card23" class="card">
+            <img id="pic23" src="images\cardBack.png" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
-  <!--Game Board -->
-  <div class="container-fluid game-board">
-    <div class="row card-row">
-      <div class="col-3">
-        <div id="card0" class="card">
-          <img id="pic0" src="images\cardBack.png" />
-        </div>
-      </div>
-      <div class="col-3">
-        <div id="card1" class="card">
-          <img id="pic1" src="images\cardBack.png" />
-        </div>
-      </div>
-      <div class="col-3">
-        <div id="card2" class="card">
-          <img id="pic2" src="images\cardBack.png" />
-        </div>
-      </div>
-      <div class="col-3">
-        <div id="card3" class="card">
-          <img id="pic3" src="images\cardBack.png" />
-        </div>
-      </div>
-    </div>
-    <div class="row  card-row">
-      <div id="card4" class="col-3">
-        <div class="card">
-          <img id="pic4" src="images\cardBack.png" />
-        </div>
-      </div>
-      <div class="col-3">
-        <div id="card5" class="card">
-          <img id="pic5" src="images\cardBack.png" />
-        </div>
-      </div>
-      <div class="col-3">
-        <div id="card6" class="card">
-          <img id="pic6" src="images\cardBack.png" />
-        </div>
-      </div>
-      <div class="col-3">
-        <div id="card7" class="card">
-          <img id="pic7" src="images\cardBack.png" />
-        </div>
-      </div>
-    </div>
-    <div class="row  card-row">
-      <div class="col-3">
-        <div id="card8" class="card">
-          <img id="pic8" src="images\cardBack.png" />
-        </div>
-      </div>
-      <div class="col-3">
-        <div id="card9" class="card">
-          <img id="pic9" src="images\cardBack.png" />
-        </div>
-      </div>
-      <div class="col-3">
-        <div id="card10" class="card">
-          <img id="pic10" src="images\cardBack.png" />
-        </div>
-      </div>
-      <div class="col-3">
-        <div id="card11" class="card">
-          <img id="pic11" src="images\cardBack.png" />
-        </div>
-      </div>
-    </div>
-    <div class="row  card-row">
-      <div class="col-3">
-        <div id="card12" class="card">
-          <img id="pic12" src="images\cardBack.png" />
-        </div>
-      </div>
-      <div class="col-3">
-        <div id="card13" class="card">
-          <img id="pic13" src="images\cardBack.png" />
-        </div>
-      </div>
-      <div class="col-3">
-        <div id="card14" class="card">
-          <img id="pic14" src="images\cardBack.png" />
-        </div>
-      </div>
-      <div class="col-3">
-        <div id="card15" class="card">
-          <img id="pic15" src="images\cardBack.png" />
-        </div>
-      </div>
-    </div>
-    <div class="row  card-row">
-      <div class="col-3">
-        <div id="card16" class="card">
-          <img id="pic16" src="images\cardBack.png" />
-        </div>
-      </div>
-      <div class="col-3">
-        <div id="card17" class="card">
-          <img id="pic17" src="images\cardBack.png" />
-        </div>
-      </div>
-      <div class="col-3">
-        <div id="card18" class="card">
-          <img id="pic18" src="images\cardBack.png" />
-        </div>
-      </div>
-      <div class="col-3">
-        <div id="card19" class="card">
-          <img id="pic19" src="images\cardBack.png" />
-        </div>
-      </div>
-    </div>
-    <div class="row  card-row">
-      <div class="col-3">
-        <div id="card20" class="card">
-          <img id="pic20" src="images\cardBack.png" />
-        </div>
-      </div>
-      <div class="col-3">
-        <div id="card21" class="card">
-          <img id="pic21" src="images\cardBack.png" />
-        </div>
-      </div>
-      <div class="col-3">
-        <div id="card22" class="card">
-          <img id="pic22" src="images\cardBack.png" />
-        </div>
-      </div>
-      <div class="col-3">
-        <div id="card23" class="card">
-          <img id="pic23" src="images\cardBack.png" />
-        </div>
-      </div>
-    </div>
-  </div>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="index.js"></script>
 </body>

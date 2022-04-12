@@ -82,7 +82,7 @@ function checkMatch() {
         //this means the game is 'won' and all available cards are matched
         setTimeout(function() {
           winSound.play();
-          $("#end-overlay").css({"display":"inline"});
+        $("#end-overlay").css({"display":"inline"});
         },2200);
 
       };
