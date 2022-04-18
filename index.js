@@ -1,5 +1,7 @@
 
 // Image Attribution
+// Card back picture I created using Inkscape
+// the others are from  www.vector-finder.com
 // ========================================
 // 1. TERMS OF USE:
 //
@@ -8,7 +10,7 @@
 // License / Usage details : Free for commercial use
 //
 //
-// 2. DISCLAIMER: 
+// 2. DISCLAIMER:
 //
 // Vector-Finder.com is a Free Vector & Stock Vector Images Search Engine,
 // Download/Search Over 1,600 Free Vector and Stock Vector Art from One Central Location.
