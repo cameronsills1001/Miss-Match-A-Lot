@@ -3,7 +3,9 @@ body {
   background-color: black;
 }
 
-
+.cards {
+  border-radius: 10px;
+}
 
 .game-board {
   margin-top: 10%;
@@ -52,7 +54,7 @@ body {
 .win {
   font-family: lobster, cursive;
   font-size: 5rem;
-  color: orange;
+  color: #FFF56D;
   position: fixed;
   left: 50%;
   top: 30%;
@@ -63,7 +65,7 @@ body {
 .win-sm {
   font-family: lobster, cursive;
   font-size: 2rem;
-  color: orange;
+  color: #FFF56D;
   position: fixed;
   left: 50%;
   top: 45%;
@@ -78,17 +80,14 @@ body {
 #end-overlay {
   position: fixed;
   display: none;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.8);
   z-index: 2;
   cursor: pointer;
+  text-align: center;
 }
 
 #restart {
   position: fixed;
+  background-color: #FFF56D;
   left: 50%;
   top: 60%;
   transform: translate(-50%, 0);
@@ -101,10 +100,12 @@ img {
 @media only screen and (orientation: portrait){
   .win {
     font-size: 2.5rem;
+
   }
 
   .win-sm {
     font-size: 1rem;
+    width: 80%;
   }
 }
 @media (orientation:landscape){
@@ -137,7 +138,7 @@ img {
   .status-img {
     border-radius: 5px;
     width: 90%;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
     padding: 0;
     transform: rotate(-90deg);
   }
@@ -163,17 +164,20 @@ img {
 }
 
 .win {
-  font-size: 1.5rem;
+  font-size: 2rem;
   top: 75%;
+  left: 45%
 }
 
 .win-sm {
-  font-size: 1rem;
+  font-size: 1.5rem;
   top: 80%;
+  left: 45%;
 }
 
 #restart {
   top: 90%;
+  left: 45%;
 }
 
 }
